@@ -1,0 +1,6 @@
+*~
+compiled/
+mceval
+lazy-mceval
+test-mceval
+test-lazy-mceval
