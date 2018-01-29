@@ -92,7 +92,7 @@
     "Test hybrid evaluator"
     (check-exn (regexp "^/: division by zero$")
                (lambda () (test-mc-eval-sequence '((define (try a b) (if (= a 0) 1 b)) (try 0 (/ 1 0)))))
-               "Applicatiuve-order evaluation")
+               "Applicative-order evaluation")
     (check-equal? (test-mc-eval-sequence '((define (try a (delay b)) (if (= a 0) 1 b)) (try 0 (/ 1 0))))
                   1
                   "Normal-order evaluation"))))
